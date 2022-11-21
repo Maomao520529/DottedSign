@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/all.css" />
+    <title>點點簽</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <nav class="navbar">
+        <div class="container-fluid justify-content-around">
+          <a class="navbar-brand" href="./index.html"
+            ><img src="./images/logo.png" alt="logo"
+          /></a>
+          <button type="button" class="btn btn-lg">歷史文件</button>
+        </div>
+      </nav>
+      <div class="document">
+        <div class="container-fluid px-5">
+          <div class="row my-5">
+            <div class="col my-3 documentText">
+              <p class="h5 text-center text-white">簽署文件</p>
+            </div>
+            <div class="col my-3">
+              <p class="h5 text-center text-white">建立簽名檔</p>
+            </div>
+          </div>
+          <div class="row px-5">
+            <div class="col-2">
+              <ul class="timeline">
+                <li class="active">
+                    <p class="text-white">上傳文件</p>
+                    <span>1</span>
+                </li>
+                <li>
+                 <p class="text-white">選擇簽名檔</p>
+                 <span>2</span>
+                </li>
+                <li>
+                 <p class="text-white">位移與尺寸</p>
+                  <span>3</span>
+                </li>
+              </ul>
+            </div>
+            <div class="col-10 ">
+              <div class=" documentBg bg-white">
+                <div class="documenttUpdate d-flex justify-content-end">
+                    <ul class="my-4">
+                      <li>．檔案格式需為 PDF 或 IMG</li>
+                      <li>．檔案大小上限為 10MB</li>
+                    </ul>
+                <div>
+                  <label for="file-upload" class="custom-file-upload">
+                        <i class="fa fa-cloud-upload"></i> 上傳文件
+                  </label>
+                    <input id="file-upload" type="file" accept="application/pdf" placeholder="上傳文件"/>
+                    </div>
+                </div>
+                    <hr>
+                <div class=" container d-flex justify-content-center">
+                      <canvas id="canvas" style="border: 1px solid #fff"> </canvas>
+                </div>
+              </div>  
+              <div class="d-flex justify-content-end">
+                <button type="button" class="documentBtn  btn-lg btn-block">
+                <a href="sign.html">下一步</a>
+              </button>
+              </div>
+            </div>
+            </div>
+          </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <!-- 引入pdf.js的套件 -->
+    <script src="https://unpkg.com/fabric@latest/dist/fabric.js"></script>
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+    <script src="./js/pdf.js"></script>
+  </body>
+</html>
